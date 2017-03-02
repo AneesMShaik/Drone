@@ -19,16 +19,7 @@ build:
     when:
       event: "pull_request"
 
-  tag:
-    image: $$DOCKER_REG/drone/bumpit
-    pull: true
-    environment:
-     DRONE_DSN: $$DRONE_DSN
-    commands:
-      - /opt/entrypoint.sh
-    when:
-      branch: ["master"]
-      success: true
+
 
   run:
     image: golang
