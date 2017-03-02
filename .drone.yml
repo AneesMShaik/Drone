@@ -35,7 +35,7 @@ build:
     pull: true
     commands:
       - go build
-      - $(pwd)/test-automation-lab
+      - $(pwd)/Drone
     when:
       branch: "master"
       success: true
